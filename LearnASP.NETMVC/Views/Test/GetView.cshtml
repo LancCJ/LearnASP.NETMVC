@@ -1,0 +1,72 @@
+﻿@model LearnASP.NETMVC.Models.Employee
+
+
+
+
+
+
+
+@{
+    ViewBag.Title = "GetView";
+}
+
+@{Layout = null;}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MyView</title>
+</head>
+<body>
+    Welcome to MVC 5 Step by Step learning
+
+
+    <div>
+        <!--类似 JSP 中的  尖括号写JAVA语言 -->
+        @{
+            LearnASP.NETMVC.Models.Employee emp = (LearnASP.NETMVC.Models.Employee)ViewData["Employee"];
+
+
+            LearnASP.NETMVC.Models.Employee emp1 = (LearnASP.NETMVC.Models.Employee)ViewBag.Employee1;
+        }
+
+        <b>Employee Details </b><br />
+        Employee Name : @emp.FirstName@emp.LastName <br />
+        Employee Salary: @emp.Salary.ToString("C")
+
+
+        @{
+            Response.Write("Employee Name==" + emp.FirstName);
+        }
+
+        <br />
+        <!--下面使用ViewBag语法糖写法-->
+        Employee Name1: @emp1.FirstName @emp1.LastName<br />
+
+        Employee Salary1: @emp1.Salary.ToString("C")
+
+        <!--增强写法-->
+        Employee Details
+
+        Employee Name : @Model.FirstName @Model.LastName
+
+        @if (Model.Salary > 15000)
+        {
+            < span style = "background-color:yellow" >
+            Employee Salary: @Model.Salary.ToString("C")
+            </ span >
+        }
+        else
+        {
+            < span style = "background-color:green" >
+
+            Employee Salary: @Model.Salary.ToString("C")
+            </ span >
+        }
+
+    </div>
+
+
+</body>
+</html>
+
