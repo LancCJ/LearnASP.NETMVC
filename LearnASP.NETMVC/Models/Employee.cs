@@ -20,7 +20,7 @@ namespace LearnASP.NETMVC.Models
         [StringLength(5, ErrorMessage = "Last Name length should not be greater than 5")]
         public string LastName { get; set; }
 
-        public int Salary { get; set; }
+        public int? Salary { get; set; }
 
 
     }

@@ -5,30 +5,30 @@
     ViewBag.Title = "Index";
 }
 
-    <a href ="/Employee/AddNew">Add New</a>
-        <div>
-            <table>
+<a href="/Employee/AddNew">Add New</a>
+<div>
+    <table>
 
-                <tr>
+        <tr>
 
-                    <th>Employee Name</th>
+            <th>Employee Name</th>
 
-                    <th>Salary</th>
+            <th>Salary</th>
 
-                </tr>
-                @foreach (EmployeeViewModel item in Model.Employees)
-                {
-                    < tr >
-                    < td > @item.EmployeeName </ td >
-                    < td style = "background-color:@item.SalaryColor" > @item.Salary </ td >
-                    </ tr >
-                }
+        </tr>
+        @foreach (EmployeeViewModel item in Model.Employees)
+        {
+            < tr >
+            < td > @item.EmployeeName </ td >
+            < td style = "background-color:@item.SalaryColor" > @item.Salary </ td >
+            </ tr >
+        }
 
 
-              
-            </table>
 
-        </div>
+    </table>
+
+</div>
 
 
 
