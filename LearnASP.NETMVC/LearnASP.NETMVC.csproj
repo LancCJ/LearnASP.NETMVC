@@ -126,21 +126,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\BundleConfig2.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\FilterConfig2.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\RouteConfig2.cs" />
     <Compile Include="Controllers\AuthenticationController.cs" />
+    <Compile Include="Controllers\BulkUploadController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="DataAccessLayer\SalesERPDAL .cs" />
     <Compile Include="Filters\AdminFilter.cs" />
     <Compile Include="Filters\CHeaderFooterFilter.cs" />
+    <Compile Include="Filters\EmployeeExceptionFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logger\FileLogger.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\FirstNameValidation.cs" />
     <Compile Include="Models\UserDetails.cs" />
@@ -150,6 +151,7 @@
     <Compile Include="ViewModels\CreateEmployeeViewModel.cs" />
     <Compile Include="ViewModels\EmployeeListViewModel.cs" />
     <Compile Include="ViewModels\EmployeeViewModel.cs" />
+    <Compile Include="ViewModels\FileUploadViewModel.cs" />
     <Compile Include="ViewModels\FooterViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +177,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\Validations.js" />
+    <Content Include="Views\BulkUpload\Index.cshtml" />
     <None Include="Views\Employee\AddNewLink.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -200,6 +203,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Error\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
